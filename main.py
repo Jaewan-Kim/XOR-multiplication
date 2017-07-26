@@ -7,5 +7,18 @@ def toBinary(number):
     return str(number%2)
 
 
-def XORaddition(number1, number2):
-    digit = 1
+def XORMultiplication(number1, number2):
+    number = int(number1) * int(number2)
+    output = ''
+    for chr in str(number):
+        if int(chr) % 2 == 0:
+            output += '0'
+        else:
+            output += '1'
+    return output
+
+
+input1 = int(input('enter the first number: '))
+input2 = int(input('enter the second number: '))
+
+print(XORMultiplication(toBinary(input1),toBinary(input2)))
